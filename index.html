@@ -111,14 +111,15 @@
         }
         .social { margin-top: 35px; }
         .social a {
-            color: #a6a6a6;
-            font-size: 14px;
-            text-decoration: none;
-            border-bottom: 1px solid #555;
-            padding-bottom: 4px;
-            transition: color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
-        .social a:hover { color: #fff; }
+        .social a:hover { opacity: 0.8; transform: translateY(-2px); }
+        .social img { display: block; width: 28px; height: 28px; }
         footer {
             border-top: 1px solid #303238;
             padding-top: 25px;
@@ -174,7 +175,12 @@
 
             <div class="social">
                 <a href="https://www.linkedin.com/in/fernando-joaquín-muñoz-dávila-22bb1444a"
-                   target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Visitar perfil de LinkedIn de Fernando Muñoz"
+                   title="LinkedIn">
+                    <img src="https://cdn.simpleicons.org/linkedin/0A66C2"
+                         alt="LinkedIn" width="28" height="28">
+                </a>
             </div>
         </section>
 
