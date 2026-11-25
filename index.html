@@ -130,6 +130,21 @@
             letter-spacing: 1px;
         }
         .description a { color: #b8d9c0; text-underline-offset: 0.2em; }
+        .section-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 22px; }
+        .section-nav a, .academics a { color: #b8d9c0; text-underline-offset: 0.22em; }
+        .section-nav a { font-size: 15px; padding: 5px 0; }
+        a:focus-visible { outline: 2px solid #b8d9c0; outline-offset: 4px; }
+        .academics { border-top: 1px solid #303238; padding-top: 28px; margin-bottom: 64px; }
+        .academics h2 { font-size: 24px; }
+        .course-list, .teachers, .peers { list-style: none; }
+        .course { padding: 22px 0; }
+        .course:first-child { padding-top: 2px; }
+        .course + .course { border-top: 1px solid #303238; }
+        .course h3 { font-size: 18px; line-height: 1.4; }
+        .course-meta { margin: 4px 0 8px; color: #b9babe; font-size: 14px; line-height: 1.5; }
+        .teachers { margin: 10px 0; color: #c4c4c4; font-size: 14px; line-height: 1.8; }
+        .syllabus, .peers { font-size: 15px; line-height: 1.8; }
+        .peers li + li { margin-top: 8px; }
         @media (max-width: 600px) {
             body { padding: 25px; }
             .top { margin-bottom: 75px; }
@@ -150,6 +165,11 @@
             <h1 id="nombre">Fernando Joaquín<br>Muñoz Dávila</h1>
             <p class="career">Estudiante de Inteligencia Artificial</p>
             <p class="university">Universidad Católica San Pablo</p>
+            <nav class="section-nav" aria-label="Secciones del perfil">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#cursos">Cursos y sílabos</a>
+                <a href="#companeros">Compañeros</a>
+            </nav>
         </section>
 
         <section class="about" aria-labelledby="sobre-mi">
@@ -206,6 +226,70 @@
                     </svg>
                 </a>
             </div>
+        </section>
+
+
+        <section class="academics" aria-labelledby="cursos">
+            <h2 id="cursos">Cursos y sílabos</h2>
+            <ul class="course-list">
+                <li class="course">
+                    <h3>Introducción a Computación</h3>
+                    <p class="course-meta">2026-02 · C101 · I semestre · 3 créditos</p>
+                    <p class="description">Cómo se representan los datos, cómo se comunican las computadoras y cómo se descompone un problema en pasos que pueda ejecutar un algoritmo.</p>
+                    <ul class="teachers" aria-label="Docentes de Introducción a Computación">
+                        <li>Ernesto Cuadros-Vargas · <a href="https://www.linkedin.com/in/ecuadrosv/" aria-label="LinkedIn de Ernesto Cuadros-Vargas">LinkedIn</a></li>
+                        <li>Rosmery Violeta Quispe Zavala · <a href="https://www.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638/" aria-label="LinkedIn de Rosmery Violeta Quispe Zavala">LinkedIn</a></li>
+                    </ul>
+                    <a class="syllabus" href="/silabos/introduccion-a-computacion-2026-02.pdf" aria-label="Sílabo de Introducción a Computación (PDF)">Ver sílabo (PDF)</a>
+                </li>
+                <li class="course">
+                    <h3>Fundamentos Matemáticos para Computación</h3>
+                    <p class="course-meta">2026-02 · I semestre · 6 créditos</p>
+                    <p class="description">Lógica, conjuntos y funciones para describir relaciones. Vectores, matrices y sistemas lineales para resolver problemas de computación.</p>
+                    <ul class="teachers" aria-label="Docentes de Fundamentos Matemáticos para Computación">
+                        <li>Ronaldo André Del Carpio Mendoza · <a href="https://orcid.org/0009-0006-6854-038X" aria-label="ORCID de Ronaldo André Del Carpio Mendoza">ORCID</a></li>
+                        <li>Sabrina Suárez Calcina · <a href="https://saocarlos.usp.br/d-topological-data-analysis-applications-in-machine-learning/" aria-label="Investigación en la USP de Sabrina Suárez Calcina">Investigación en la USP</a></li>
+                        <li>Fiorella Rendón García · <a href="https://www.linkedin.com/in/fiorella-mar%C3%ADa-rend%C3%B3n-garc%C3%ADa-7aa9b7374/" aria-label="LinkedIn de Fiorella Rendón García">LinkedIn</a></li>
+                    </ul>
+                    <a class="syllabus" href="/silabos/fundamentos-matematicos-2026-02.pdf" aria-label="Sílabo de Fundamentos Matemáticos para Computación (PDF)">Ver sílabo (PDF)</a>
+                </li>
+                <li class="course">
+                    <h3>Lógica · Computación</h3>
+                    <p class="course-meta">2026-02 · CCOMP 1-1 y CCOMP 1-4 · 2 créditos</p>
+                    <p class="description">Cómo reconocer las premisas de un argumento, evaluar si justifican su conclusión y detectar falacias.</p>
+                    <ul class="teachers" aria-label="Docentes de Lógica · Computación">
+                        <li>Kristel Gisselle Loayza Cruz · <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" aria-label="LinkedIn de Kristel Gisselle Loayza Cruz">LinkedIn</a></li>
+                    </ul>
+                    <a class="syllabus" href="/silabos/logica-ccomp-2026-02.docx" aria-label="Sílabo de Lógica · Computación (Word)">Descargar sílabo (Word)</a>
+                </li>
+                <li class="course">
+                    <h3>Gnoseología y Tecnociencia</h3>
+                    <p class="course-meta">2026-02 · CCOMP 3-2, 3-3 y 3-4 · 3 créditos</p>
+                    <p class="description">El curso pregunta qué entendemos por inteligencia y compara la razón humana con la capacidad de calcular y elegir medios para alcanzar un fin.</p>
+                    <ul class="teachers" aria-label="Docentes de Gnoseología y Tecnociencia">
+                        <li>Kristel Gisselle Loayza Cruz · <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" aria-label="LinkedIn de Kristel Gisselle Loayza Cruz">LinkedIn</a></li>
+                    </ul>
+                    <a class="syllabus" href="/silabos/gnoseologia-y-tecnociencia-2026-02.pdf" aria-label="Sílabo de Gnoseología y Tecnociencia (PDF)">Ver sílabo (PDF)</a>
+                </li>
+                <li class="course">
+                    <h3>Lógica · Educación</h3>
+                    <p class="course-meta">2025-02 · EDI 2-1 · 2 créditos</p>
+                    <p class="description">Formación de conceptos, juicios y razonamientos. Estudia las reglas de la argumentación y los criterios para reconocer la verdad de un juicio.</p>
+                    <ul class="teachers" aria-label="Docentes de Lógica · Educación">
+                        <li>Jorge Bosco · <a href="https://postgrado.ucsp.edu.pe/cursos/pilares-educacion-realista/" aria-label="Perfil en la UCSP de Jorge Bosco">Perfil en la UCSP</a></li>
+                    </ul>
+                    <a class="syllabus" href="/silabos/logica-edi-2025-02.pdf" aria-label="Sílabo de Lógica · Educación (PDF)">Ver sílabo (PDF)</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="academics" aria-labelledby="companeros">
+            <h2 id="companeros">Páginas de mis compañeros</h2>
+            <ul class="peers">
+                <li><a href="https://luis250608.github.io/Luis-Savina.github.io/">Luis Angel Savina Encinas</a></li>
+                <li><a href="https://zeeshanmcorimanya.github.io/">Zeeshan Muhammad Corimanya</a></li>
+                <li><a href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/">Breshia del Pilar Peralta Mamani</a></li>
+            </ul>
         </section>
 
         <footer>
